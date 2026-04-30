@@ -1,4 +1,179 @@
+@font-face {
+  font-family: "CCWildWords";
+  src: url("../fonts/CCWildWords Roman.ttf") format("truetype");
+}
 body {
-  background-color: black;
-  color: red;
+  background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.9) 100%), url("../images/background_image.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ece9e9;
+  font-size: 14pt;
+  font-family: CCWildWords;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #000;
+  border-bottom: 0.3rem solid rgba(255, 13, 0, 0.5);
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  border: 0.5rem solid rgba(255, 13, 0, 0.5);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 2rem;
+  max-width: 80%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#gameRules {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.rule {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border: 0.2rem solid rgba(255, 13, 0, 0.5);
+  text-align: center;
+}
+.rule:hover {
+  background-color: rgba(255, 13, 0, 0.2);
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+input, textarea, select {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ece9e9;
+  border: 0.2rem solid rgba(255, 13, 0, 0.5);
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #ff0d00;
+  box-shadow: 0 0 0.5rem rgba(255, 13, 0, 0.5);
+}
+
+button {
+  background-color: rgba(255, 13, 0, 0.3);
+  color: #ece9e9;
+  border: 0.2rem solid rgba(255, 13, 0, 0.5);
+  border-radius: 0.3rem;
+  padding: 0.7rem 1.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background-color: rgba(255, 13, 0, 0.6);
+  box-shadow: 0 0 1rem rgba(255, 13, 0, 0.5);
+}
+button:active {
+  transform: scale(0.98);
+}
+button {
+  background-color: #000;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 0.2rem solid rgba(255, 13, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+thead {
+  background-color: rgba(255, 13, 0, 0.3);
+  border-bottom: 0.3rem solid rgba(255, 13, 0, 0.5);
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+tbody {
+  display: block;
+  overflow-y: auto;
+  max-height: 35rem;
+}
+
+th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: bold;
+  color: #ff0d00;
+}
+
+td {
+  padding: 0.8rem 1rem;
+  border-bottom: 0.1rem solid rgba(255, 13, 0, 0.5);
+}
+
+tbody tr {
+  transition: background-color 0.2s ease;
+}
+tbody tr:hover {
+  background-color: rgba(255, 13, 0, 0.2);
+}
+
+a {
+  color: #ece9e9;
+  text-decoration: none;
+}
+a:visited {
+  color: #ece9e9;
 }/*# sourceMappingURL=style.css.map */

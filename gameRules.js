@@ -58,7 +58,8 @@ function renderRules() {
   for (i = 0; i < rules.length; i++) {
     a = document.importNode(item, true);
     a.querySelector("h2").textContent = rules[i].ruleNr;
-    a.querySelector("p").textContent = rules[i].ruleText;
+    a.querySelector("#content").textContent = rules[i].ruleText;
+    a.querySelector("#author").textContent = rules[i].ruleAuthor;
     document.getElementById("gameRules").appendChild(a);
   }
 }
