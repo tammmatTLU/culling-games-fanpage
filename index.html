@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="gameRules.js"></script>
     <title>The Culling Games</title>
 </head>
 <body>
@@ -15,7 +16,12 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, libero. Commodi ut omnis, odit reprehenderit, magni consequatur iste inventore vero modi ea vel repudiandae quia, unde sed voluptates perferendis corporis.</p>
         </section>
         <section id="gameRules">
-            <p>reeglid</p>
+            <template id="ruleTemplate">
+                <article class="rule">
+                    <h2></h2>
+                    <p></p>
+                </article>
+            </template>
         </section>
         <section id="participants">
             <p>tabel mängijatega</p>
@@ -27,5 +33,8 @@
             <p>vorm lemmik tegelase valikuks.</p>
         </section>
     </main>
+    <script>
+        renderRules();
+    </script>
 </body>
 </html>
