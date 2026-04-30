@@ -11,8 +11,12 @@
 $background-color-transparent: rgba(0, 0, 0, 0.6)
 $background-color: #000
 $text-color: #ece9e9
+$text-color-dead: red
+$text-color-alive: green
 $border-color: rgba(255, 13, 0, 0.5)
 $sec-text-color: #9e9b9b
+$background-color-less-transparent: rgba(0, 0, 0, 0.8)
+$background-color-highlight: rgba(255, 13, 0, 0.4)
 
 body
     background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.9) 100%), url('../images/background_image.webp')
@@ -21,7 +25,7 @@ body
     background-attachment: fixed
     color: $text-color
     font-size: 14pt
-    font-family: CCWildWords
+    font-family: CCWildWords    
     margin: 0
     padding: 0
 
@@ -77,6 +81,7 @@ section
     height: 100%
     width: 100% 
     box-sizing: border-box
+    background-color: $background-color-less-transparent
     transition: background-color 0.5s ease
     h2, #author
         font-family: EB Garamond, serif
@@ -88,7 +93,7 @@ section
         font-size: 2.5rem
 
     &:hover
-        background-color: rgba(255, 13, 0, 0.2)
+        background-color: $background-color-highlight
 
 
 .controls
@@ -113,7 +118,7 @@ label
     font-weight: bold
 
 input, textarea, select
-    background-color: rgba(0, 0, 0, 0.8)
+    background-color: $background-color-less-transparent
     color: $text-color
     border: 0.2rem solid $border-color
     border-radius: 0.3rem
@@ -127,7 +132,7 @@ input, textarea, select
         box-shadow: 0 0 0.5rem rgba(255, 13, 0, 0.5)
 
 button
-    background-color: rgba(255, 13, 0, 0.3)
+    background-color: $background-color-highlight
     color: $text-color
     border: 0.2rem solid $border-color
     border-radius: 0.3rem
@@ -149,11 +154,11 @@ table
     width: 100%
     border-collapse: collapse
     border: 0.2rem solid $border-color
-    background-color: rgba(0, 0, 0, 0.8)
+    background-color: $background-color-less-transparent
     table-layout: fixed
 
 thead
-    background-color: rgba(255, 13, 0, 0.3)
+    background-color: $background-color-highlight
     border-bottom: 0.3rem solid $border-color
 
 tbody
@@ -215,3 +220,12 @@ a
 #vote, #register
     flex: 1 1 0
     margin: 1rem
+
+.dead
+    color: $text-color-dead
+
+.alive
+    color: $text-color-alive
+
+.inactive
+    color: $sec-text-color
