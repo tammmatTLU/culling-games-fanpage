@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
     <title>The Culling Games</title>
 </head>
 <body>
@@ -17,15 +18,128 @@
         <section id="gameRules">
             <p>reeglid</p>
         </section>
-        <section id="participants">
-            <p>tabel mängijatega</p>
-        </section>
-        <section id="registerPlayer">
-            <p>vorm registreerimiseks</p>
-        </section>
-        <section id="favouriteCharacter">
-            <p>vorm lemmik tegelase valikuks.</p>
-        </section>
+        <section id="participants" class="section">
+            <div class="container">
+                <h2>Participant table</h2>
+                <p>
+                The roster includes season-3-shown participants and stated point totals where available.
+                When a point total is not clearly stated, the table uses a dash.
+                </p>
+
+                <div class="summary" id="summary"></div>
+
+                <div class="controls">
+                <label>
+                    <span>Search</span>
+                    <input type="search" id="search-input" placeholder="Search by name">
+                </label>
+
+                <label>
+                    <span>Colony</span>
+                    <select id="colony-filter">
+                    <option value="all">All</option>
+                    <option value="Tokyo No. 1">Tokyo No. 1</option>
+                    <option value="Tokyo No. 2">Tokyo No. 2</option>
+                    <option value="Sendai">Sendai</option>
+                    </select>
+                </label>
+
+                <label>
+                    <span>Status</span>
+                    <select id="alive-filter">
+                    <option value="all">All</option>
+                    <option value="alive">Alive</option>
+                    <option value="dead">Dead</option>
+                    </select>
+                </label>
+
+                <label>
+                    <span>Activity</span>
+                    <select id="activity-filter">
+                    <option value="all">All</option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                    </select>
+                </label>
+
+                <label>
+                    <span>Sort</span>
+                    <select id="sort-select">
+                    <option value="points-desc">Points: high to low</option>
+                    <option value="points-asc">Points: low to high</option>
+                    <option value="name-asc">Name: A to Z</option>
+                    <option value="colony-asc">Colony</option>
+                    </select>
+                </label>
+                </div>
+
+                <div class="table-wrap">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Points</th>
+                        <th>Colony</th>
+                        <th>Alive</th>
+                        <th>Active</th>
+                        <th>Info</th>
+                    </tr>
+                    </thead>
+                    <tbody id="participants-body"></tbody>
+                </table>
+                </div>
+            </div>
+            </section>
+        <section id="vote" class="section alt">
+      <div class="container two-column">
+        <div>
+          <h2>Vote for your favorite player</h2>
+
+          <form id="vote-form" class="card">
+            <label for="favorite-player">Favorite player</label>
+            <select id="favorite-player" name="favorite-player" required>
+              <option value="">Choose one</option>
+              <option>Yuji Itadori</option>
+              <option>Megumi Fushiguro</option>
+              <option>Hiromi Higuruma</option>
+              <option>Yuta Okkotsu</option>
+              <option>Kinji Hakari</option>
+              <option>Hajime Kashimo</option>
+            </select>
+
+            <label for="reason">Reason</label>
+            <textarea id="reason" name="reason" rows="4" placeholder="Why did you choose them?" required></textarea>
+
+            <button type="submit" class="button primary">Submit vote</button>
+            <p id="vote-message" class="message"></p>
+          </form>
+        </div>
+
+        <div id="register">
+          <h2>Register as a player</h2>
+          <p>Your name will be added to the participant table with 0 points.</p>
+
+          <form id="register-form" class="card">
+            <label for="player-name">Name</label>
+            <input type="text" id="player-name" name="player-name" required>
+
+            <label for="player-colony">Colony</label>
+            <select id="player-colony" name="player-colony" required>
+              <option value="">Choose a colony</option>
+              <option>Tokyo No. 1</option>
+              <option>Tokyo No. 2</option>
+              <option>Sendai</option>
+            </select>
+
+            <label for="player-notes">Short info</label>
+            <textarea id="player-notes" name="player-notes" rows="4" placeholder="Example: New player with unknown cursed technique." required></textarea>
+
+            <button type="submit" class="button primary">Register player</button>
+            <p id="register-message" class="message"></p>
+          </form>
+        </div>
+      </div>
+    </section>
     </main>
 </body>
 </html>
