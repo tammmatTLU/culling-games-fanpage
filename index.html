@@ -106,29 +106,29 @@
                 </table>
             </div>
         </section>
-        <section id="vote" class="section alt">
-            <h2>Vote for your favorite player</h2>
+        <section id="forms" class="section alt">
+            <div id="vote">
+                <h2>Vote for your favorite player</h2>
+                <form id="vote-form" class="card">
+                    <label for="favorite-player">Favorite player</label>
+                    <select id="favorite-player" name="favorite-player" required>
+                    <option value="">Choose one</option>
+                    <option>Yuji Itadori</option>
+                    <option>Megumi Fushiguro</option>
+                    <option>Hiromi Higuruma</option>
+                    <option>Yuta Okkotsu</option>
+                    <option>Kinji Hakari</option>
+                    <option>Hajime Kashimo</option>
+                    </select>
 
-            <form id="vote-form" class="card">
-                <label for="favorite-player">Favorite player</label>
-                <select id="favorite-player" name="favorite-player" required>
-                <option value="">Choose one</option>
-                <option>Yuji Itadori</option>
-                <option>Megumi Fushiguro</option>
-                <option>Hiromi Higuruma</option>
-                <option>Yuta Okkotsu</option>
-                <option>Kinji Hakari</option>
-                <option>Hajime Kashimo</option>
-                </select>
+                    <label for="reason">Reason</label>
+                    <textarea id="reason" name="reason" rows="4" placeholder="Why did you choose them?" required></textarea>
 
-                <label for="reason">Reason</label>
-                <textarea id="reason" name="reason" rows="4" placeholder="Why did you choose them?" required></textarea>
-
-                <button type="submit" class="button primary">Submit vote</button>
-                <p id="vote-message" class="message"></p>
-            </form>
-        </section>
-        <section id="register">
+                    <button type="submit" class="button primary">Submit vote</button>
+                    <p id="vote-message" class="message"></p>
+                </form>
+            </div>
+        
             <div id="register">
                 <h2>Register as a player</h2>
                 <p>Your name will be added to the participant table with 0 points.</p>
