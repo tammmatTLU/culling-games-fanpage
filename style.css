@@ -2,6 +2,10 @@
   font-family: "CCWildWords";
   src: url("../fonts/CCWildWords Roman.ttf") format("truetype");
 }
+@font-face {
+  font-family: "EB Garamond";
+  src: url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+}
 body {
   background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.9) 100%), url("../images/background_image.webp");
   background-size: cover;
@@ -58,6 +62,7 @@ section {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
+  align-items: stretch;
 }
 
 .rule {
@@ -68,6 +73,15 @@ section {
   padding: 0.5rem;
   border: 0.2rem solid rgba(255, 13, 0, 0.5);
   text-align: center;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+.rule h2, .rule #author {
+  font-family: EB Garamond, serif;
+}
+.rule h2 {
+  font-size: 2.5rem;
 }
 .rule:hover {
   background-color: rgba(255, 13, 0, 0.2);
@@ -76,7 +90,11 @@ section {
 .controls {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0.5rem;
 }
 
 form {
@@ -135,32 +153,41 @@ table {
   border-collapse: collapse;
   border: 0.2rem solid rgba(255, 13, 0, 0.5);
   background-color: rgba(0, 0, 0, 0.8);
+  table-layout: fixed;
 }
 
 thead {
   background-color: rgba(255, 13, 0, 0.3);
   border-bottom: 0.3rem solid rgba(255, 13, 0, 0.5);
+}
+
+tbody {
+  display: block;
+  max-height: 35rem;
+  overflow-y: auto;
+  width: 100%;
+}
+
+tr {
   display: table;
   width: 100%;
   table-layout: fixed;
 }
 
-tbody {
-  display: block;
-  overflow-y: auto;
-  max-height: 35rem;
+th, td {
+  padding: 1rem;
+  text-align: left;
+  color: #ff0d00;
+  border-bottom: 0.1rem solid rgba(255, 13, 0, 0.5);
 }
 
 th {
-  padding: 1rem;
-  text-align: left;
   font-weight: bold;
-  color: #ff0d00;
 }
 
 td {
-  padding: 0.8rem 1rem;
-  border-bottom: 0.1rem solid rgba(255, 13, 0, 0.5);
+  font-weight: normal;
+  color: #ece9e9;
 }
 
 tbody tr {
