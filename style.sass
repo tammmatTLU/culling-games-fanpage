@@ -119,6 +119,7 @@ section
     margin: 2rem auto
     max-width: 80%
     background-color: $background-color-transparent
+    box-shadow: -0.7rem 0.7rem 0.7rem rgba(0, 0, 0, 0.4), 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4), 0 0.2rem 0.3rem rgba(0, 0, 0, 0.4)
 
 #gameRules
     display: grid
@@ -128,6 +129,7 @@ section
     align-items: stretch
     border: none
     background: none
+    box-shadow: none
 
 .rule
     @include flex-column(space-between, center)
@@ -139,6 +141,7 @@ section
     box-sizing: border-box
     @include themed-background($background-color-less-transparent, $text-color)
     transition: background-color 0.5s ease
+    box-shadow: -0.6rem 0.6rem 0.6rem rgba(0, 0, 0, 0.4), 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4), 0 0.2rem 0.3rem rgba(0, 0, 0, 0.4)
     
     h2, #author
         font-family: EB Garamond, serif
@@ -311,7 +314,7 @@ a
     .rule
         h2
             font-size: 1.5rem
-        padding: 0.3rem
+        padding: 0.3rem 
     
     section
         max-width: 95%
