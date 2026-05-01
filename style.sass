@@ -17,6 +17,7 @@ $background-color-transparent: rgba(0, 0, 0, 0.6)
 $background-color: #000
 $background-color-less-transparent: rgba(0, 0, 0, 0.8)
 $background-color-highlight: rgba(255, 13, 0, 0.4)
+$heading-color: rgba(255, 13, 0, 0.8)
 $text-color: #ece9e9
 $sec-text-color: #9e9b9b
 $text-color-dead: red
@@ -90,6 +91,9 @@ body
     font-family: CCWildWords    
     margin: 0
     padding: 0
+
+h1, h2
+    @include themed-background(0, $heading-color)
 
 header
     background-color: $background-color

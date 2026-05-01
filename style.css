@@ -23,6 +23,11 @@ body {
   padding: 0;
 }
 
+h1, h2 {
+  background-color: 0;
+  color: rgba(255, 13, 0, 0.8);
+}
+
 header {
   background-color: #000;
   border-bottom: 0.2rem solid rgba(255, 13, 0, 0.5);
