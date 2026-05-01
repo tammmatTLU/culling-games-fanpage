@@ -76,6 +76,10 @@ $border-radius: 0.3rem
         box-shadow: 0 0 0.5rem $shadow-color
 
 
+html
+    max-width: 100%
+    overflow-x: hidden
+
 body
     background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.9) 100%), url('../images/background_image.webp')
     background-size: cover
@@ -108,7 +112,7 @@ section
     @include themed-border($border-width-thick)
     border-radius: 0.5rem
     padding: 1rem
-    margin: 2rem
+    margin: 2rem auto
     max-width: 80%
     background-color: $background-color-transparent
 
@@ -118,6 +122,8 @@ section
     grid-template-rows: repeat(2, 1fr)
     gap: 1rem 
     align-items: stretch
+    border: none
+    background: none
 
 .rule
     @include flex-column(space-between, center)
@@ -268,8 +274,62 @@ a
 
 // TABLET VIEW
 @media screen and ( max-width: $breakpoint-tablet ) and ( min-width: $breakpoint-mobile )
-    // Adjust #gameRules, #forms, table(?)
+    #gameRules
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: auto
+        gap: 0.8rem
+    
+    section
+        max-width: 90%
+        padding: 1rem
+        margin: 1.5rem
+    
+    .summary
+        font-size: 1.3rem
 
 // MOBILE VIEW
 @media screen and ( max-width: $breakpoint-mobile )
-    // Adjust header, #gameRules, #forms, table(?)
+    header
+        padding: 0.75rem
+    
+    nav
+        gap: 1rem
+        flex-wrap: wrap
+    
+    body
+        font-size: 12pt
+    
+    #gameRules
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: auto
+        gap: 0.5rem
+    
+    .rule
+        h2
+            font-size: 1.5rem
+        padding: 0.3rem
+    
+    section
+        max-width: 95%
+        padding: 0.75rem
+        margin: 1rem
+        border-width: 0.1rem
+    
+    .summary
+        @include flex-column(center, center)
+        font-size: 1rem
+        gap: 0.5rem
+    
+    #forms
+        @include flex-column(space-evenly, center)
+        gap: 0.5rem
+    
+    .formWrapper
+        margin: 0.5rem
+        width: 90%
+    
+    table
+        font-size: 0.9rem
+    
+    th, td
+        padding: 0.5rem
